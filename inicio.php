@@ -42,15 +42,14 @@
                 </tr>
                 <?php 
                     include_once("config/config.php");
-
-                    $query = "SELECT * FROM table_name";
+                    $query = "SELECT * FROM invitados";
 
                     if ($result = $conn->query($query)) {
                         while ($row = $result->fetch_assoc()) {
-                            $field1name = $row["col1"];
-                            $field2name = $row["col2"];
-                            $field3name = $row["col3"];
-                            $field4name = $row["col4"];
+                            $field1name = $row["id"];
+                            $field2name = $row["hash"];
+                            $field3name = $row["capacidad"];
+                            $field4name = $row["disponible"];
 
                             echo '<tr> 
                                     <td>'.$field1name.'</td> 
