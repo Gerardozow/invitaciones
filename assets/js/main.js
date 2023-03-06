@@ -1,4 +1,4 @@
-
+// Funciones para leer codigos.
 const codeReader = new ZXing.BrowserQRCodeReader();
 const videoInput = document.getElementById('video');
 const videoConfig = { facingMode: 'environment' };
@@ -33,4 +33,4 @@ const stopButton = document.getElementById('stop-btn');
 stopButton.addEventListener('click', () => {
     stopScanner();
 });
-
+// .Funciones para leer codigos.
