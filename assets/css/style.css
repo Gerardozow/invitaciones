@@ -88,5 +88,33 @@ a{
 
 .contenedor__registros{
     padding: 0 1rem;;
+}
+
+
+/** Tabla **/
+.tabla{
+    border: gray solid 1px;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 0 auto;
+    box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.6);
+    -webkit-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.6);
+    -moz-box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.6);
+    border-spacing:  0;
+}
+
+.tabla__titulos{
+    background-color:gray;
+    color: white;
     text-align: center;
+}
+.tabla__titulo{
+    margin: 0;
+    padding: 1rem;
+    border: none;
+}
+
+.tabla__fila{
+    text-align: center;
+    height: 3.5rem;
 }

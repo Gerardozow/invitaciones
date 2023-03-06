@@ -33,12 +33,12 @@
         <div class="contenedor__registros">
             <p>Lorem, ipsum dolor sit amet consectetuveritatis iste.</p>
             
-            <table> 
-                <tr> 
-                    <td>ID</td> 
-                    <td>hash</td> 
-                    <td>Invitados </td> 
-                    <td>Disponibilidad </td> 
+            <table class="tabla"> 
+                <tr class="tabla__titulos"> 
+                    <td class="tabla__titulo">ID</td> 
+                    <td class="tabla__titulo">hash</td> 
+                    <td class="tabla__titulo">Invitados </td> 
+                    <td class="tabla__titulo">Disponibilidad </td> 
                 </tr>
                 <?php 
                     include_once("config/config.php");
@@ -51,11 +51,11 @@
                             $field3name = $row["capacidad"];
                             $field4name = $row["disponible"];
 
-                            echo '<tr> 
-                                    <td>'.$field1name.'</td> 
-                                    <td>'.$field2name.'</td> 
-                                    <td>'.$field3name.'</td> 
-                                    <td>'.$field4name.'</td> 
+                            echo '<tr class="tabla__fila"> 
+                                    <td class="tabla_dato">'.$field1name.'</td> 
+                                    <td class="tabla_dato">'.$field2name.'</td> 
+                                    <td class="tabla_dato">'.$field3name.'</td> 
+                                    <td class="tabla_dato">'.$field4name.'</td> 
                                 </tr>';
                         }
                         $result->free();
