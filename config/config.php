@@ -1,5 +1,5 @@
 <?php
-  $conn = new mysqli("localhost", "User", "Password", "DB");
+  $conn = new mysqli("localhost", "root", "", "invitados");
   
   if ($conn->connect_error) {
     die("ERROR: No se puede conectar al servidor: " . $conn->connect_error);

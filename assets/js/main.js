@@ -8,19 +8,20 @@ function startScanner() {
     codeReader.decodeFromVideoDevice(undefined, 'video', (result, err) => {
         if (result) {
             console.log(result)
-            document.getElementById('result').textContent = result.text
+            document.f1.valor.value = result.text
+            document.f1.valor2.value = result.text
             codeReader.reset()
         }
         if (err && !(err instanceof ZXing.NotFoundException)) {
             console.error(err)
-            document.getElementById('result').textContent = err
         }
     })
 }
 
 function stopScanner() {
     codeReader.reset()
-    document.getElementById('result').textContent = '';
+    document.f1.valor.value = '';
+    document.f1.valor2.value = '';
     console.log('Reset.')
 }
 

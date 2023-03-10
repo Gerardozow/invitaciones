@@ -27,11 +27,14 @@
             <video id="video"   class="contenedor__imagen"></video>
             <div class="contenedor__resultado">
                 <label>Resultado:</label>
-                <p class="contenedor__resultado" id="result">Example</p>
+                <form method="POST" action="registrar.php" name="f1">
+                    <input type="text" name="valor" disabled>
+                    <input type="hidden" name="valor2">
+                    <input type="submit" value="Registrar"">
+                </form>
             </div>
         </div>
         <div class="contenedor__registros">
-            <p>Lorem, ipsum dolor sit amet consectetuveritatis iste.</p>
             
             <table class="tabla"> 
                 <tr class="tabla__titulos"> 
@@ -46,10 +49,10 @@
 
                     if ($result = $conn->query($query)) {
                         while ($row = $result->fetch_assoc()) {
-                            $field1name = $row["id"];
-                            $field2name = $row["hash"];
-                            $field3name = $row["capacidad"];
-                            $field4name = $row["disponible"];
+                            $field1name = $row["Id"];
+                            $field2name = $row["Invitado"];
+                            $field3name = $row["NPases"];
+                            $field4name = $row["Estatus"];
 
                             echo '<tr class="tabla__fila"> 
                                     <td class="tabla_dato">'.$field1name.'</td> 
